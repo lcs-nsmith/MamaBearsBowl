@@ -23,32 +23,39 @@ struct ContentView: View {
     @State var isResultShowing = false
     
     // MARK: COMPUTED PROPERTIES
-    let b1 = Int(bowlOneWeight())
-    let b2 = Int(bowlTwoWeight())
-    let b3 = Int(bowlThreeWeight())
+    var b1: Int {
+        return Int(bowlOneWeight)
+    }
+    var b2: Int {
+        return Int(bowlTwoWeight)
+    }
+    var b3: Int {
+        return Int(bowlThreeWeight)
+    }
     
-    var arr = [
-        
-        b1()
+    var arr: [Int] {
+        return [
+        b1
         
         ,
         
-        b2()
+        b2
         
         ,
         
-        b3()
-    ]
-    let min = arr.min()
-    let mac = arr.max()
-    let median = arr.sorted(by: <)[arr.count / 2]
+        b3
+        ]
+    }
+    var median: Int {
+        return arr.sorted(by: <)[1]
+    }
     
-    var mamaBowl: String {
-        if median == bowlOneWeight {
+    var mamaBowl: Void {
+        if median == b1 {
             result = "Bowl 1 is Mama Bear's bowl!"
-        } else if median == bowlTwoWeight {
+        } else if median == b2 {
             result = "Bowl 2 is Mama Bear's bowl!"
-        } else if median ==  bowlThreeWeight {
+        } else if median ==  b3 {
             result = "Bowl 3 is Mama Bear's bowl!"
         } else {
             result = "error"
@@ -120,7 +127,7 @@ struct ContentView: View {
                 Button(action: {
                     isResultShowing = true
                 }, label: {
-                    Text("Find Mama Bear's bowld")
+                    Text("Find Mama Bear's bowl")
                 })
                     .background(ButtonBackground())
                     .buttonStyle(.bordered)
@@ -129,10 +136,14 @@ struct ContentView: View {
                     .padding(.top)
                 
                 HStack (spacing: 40){
-                    Text("\(String(format: "%.1f", median))")
+//                    Text("\(String(format: "%.0f", median))")
+                    Text("\(median)")
+                    
                     Text(result)
                         .font(.system(size: 20, weight: .medium, design: .serif))
                         .foregroundColor(Color("Concord"))
+                        .opacity(isResultShowing ? 1.0 : 0.0)
+                    Text("\(arr[1])")
                 }
                 Spacer(minLength: 480)
                 
