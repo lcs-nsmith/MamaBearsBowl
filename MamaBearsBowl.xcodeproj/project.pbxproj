@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		44F6FE6A2764F2B700D679E1 /* MamaBearsBowlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F6FE692764F2B700D679E1 /* MamaBearsBowlApp.swift */; };
-		44F6FE6C2764F2B700D679E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F6FE6B2764F2B700D679E1 /* ContentView.swift */; };
+		44F6FE6C2764F2B700D679E1 /* MamaBearBowlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F6FE6B2764F2B700D679E1 /* MamaBearBowlView.swift */; };
 		44F6FE6E2764F2B800D679E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44F6FE6D2764F2B800D679E1 /* Assets.xcassets */; };
 		44F6FE712764F2B800D679E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44F6FE702764F2B800D679E1 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		44F6FE662764F2B700D679E1 /* MamaBearsBowl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MamaBearsBowl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F6FE692764F2B700D679E1 /* MamaBearsBowlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MamaBearsBowlApp.swift; sourceTree = "<group>"; };
-		44F6FE6B2764F2B700D679E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		44F6FE6B2764F2B700D679E1 /* MamaBearBowlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MamaBearBowlView.swift; sourceTree = "<group>"; };
 		44F6FE6D2764F2B800D679E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44F6FE702764F2B800D679E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				44F6FE692764F2B700D679E1 /* MamaBearsBowlApp.swift */,
-				44F6FE6B2764F2B700D679E1 /* ContentView.swift */,
+				44F6FE6B2764F2B700D679E1 /* MamaBearBowlView.swift */,
 				44F6FE6D2764F2B800D679E1 /* Assets.xcassets */,
 				44F6FE6F2764F2B800D679E1 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44F6FE6C2764F2B700D679E1 /* ContentView.swift in Sources */,
+				44F6FE6C2764F2B700D679E1 /* MamaBearBowlView.swift in Sources */,
 				44F6FE6A2764F2B700D679E1 /* MamaBearsBowlApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
