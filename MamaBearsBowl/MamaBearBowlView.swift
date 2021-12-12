@@ -18,8 +18,6 @@ struct ContentView: View {
     @State var bowlTwoWeight: Double = 53.00
     @State var bowlThreeWeight: Double = 61.00
     
-    @State var result: String = ""
-    
     @State var isResultShowing = false
     
     // MARK: COMPUTED PROPERTIES
@@ -35,30 +33,30 @@ struct ContentView: View {
     
     var arr: [Int] {
         return [
-        b1
-        
-        ,
-        
-        b2
-        
-        ,
-        
-        b3
+            b1
+            
+            ,
+            
+            b2
+            
+            ,
+            
+            b3
         ]
     }
     var median: Int {
         return arr.sorted(by: <)[1]
     }
     
-    var mamaBowl: Void {
+    var result: String {
         if median == b1 {
-            result = "Bowl 1 is Mama Bear's bowl!"
+            return "Bowl 1 is Mama Bear's bowl!"
         } else if median == b2 {
-            result = "Bowl 2 is Mama Bear's bowl!"
+            return "Bowl 2 is Mama Bear's bowl!"
         } else if median ==  b3 {
-            result = "Bowl 3 is Mama Bear's bowl!"
+            return "Bowl 3 is Mama Bear's bowl!"
         } else {
-            result = "error"
+            return "error"
         }
     }
     
@@ -70,13 +68,13 @@ struct ContentView: View {
                 HStack(alignment: .top) {
                     Text("Mama Bear Bowl Finder")
                         .foregroundColor(Color("Concord"))
-                        .padding(.top)
+                        .padding(.top, 40)
                         .font(.system(size: 30, weight: .medium, design: .serif))
                     Image(systemName: "magnifyingglass")
                         .resizable()
                         .scaledToFill()
                         .foregroundColor(Color("Concord"))
-                        .padding(.top, 27)
+                        .padding(.top, 80)
                         .frame(width: 34, height: 34)
                 }
                 Divider()
@@ -134,18 +132,27 @@ struct ContentView: View {
                     .foregroundColor(Color("Concord"))
                     .cornerRadius(11)
                     .padding(.top)
-                
-                HStack (spacing: 40){
-//                    Text("\(String(format: "%.0f", median))")
-                    Text("\(median)")
-                    
-                    Text(result)
-                        .font(.system(size: 20, weight: .medium, design: .serif))
+                Divider()
+                Text(result)
+                    .font(.system(size: 20, weight: .medium, design: .serif))
+                    .foregroundColor(Color("Concord"))
+                    .opacity(isResultShowing ? 1.0 : 0.0)
+                Divider()
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        isResultShowing = false
+                    }, label: {
+                        Text("Reset")
+                    })
+                        .background(ButtonBackground())
+                        .buttonStyle(.bordered)
                         .foregroundColor(Color("Concord"))
-                        .opacity(isResultShowing ? 1.0 : 0.0)
-                    Text("\(arr[1])")
+                        .cornerRadius(11)
+                        .padding(.top)
+                        .padding(.trailing)
                 }
-                Spacer(minLength: 480)
+                Spacer(minLength: 430)
                 
             }
         }
