@@ -44,6 +44,7 @@ struct ContentView: View {
             b3
         ]
     }
+    
     var median: Int {
         return arr.sorted(by: <)[1]
     }
@@ -77,7 +78,9 @@ struct ContentView: View {
                         .padding(.top, 80)
                         .frame(width: 34, height: 34)
                 }
+                
                 Divider()
+                
                 HStack() {
                     VStack {
                         Text("Bowl 1")
@@ -92,7 +95,9 @@ struct ContentView: View {
                                 step: 1.0)
                             .padding(.trailing)
                     }
+                    
                     Divider()
+                    
                     VStack {
                         Text("Bowl 2")
                             .font(.system(size: 25, weight: .medium, design: .serif))
@@ -106,7 +111,9 @@ struct ContentView: View {
                                 step: 1.0)
                             .padding(.trailing)
                     }
+                    
                     Divider()
+                    
                     VStack {
                         Text("Bowl 3")
                             .font(.system(size: 25, weight: .medium, design: .serif))
@@ -121,25 +128,30 @@ struct ContentView: View {
                             .padding(.trailing)
                     }
                 }
+                
                 Divider()
+                
                 Button(action: {
                     isResultShowing = true
                 }, label: {
-                    Text("Find Mama Bear's bowl")
+                    Text("Find Mama Bear's bowl!")
                 })
                     .background(ButtonBackground())
                     .buttonStyle(.bordered)
                     .foregroundColor(Color("Concord"))
                     .cornerRadius(11)
-                    .padding(.top)
                 Divider()
                 Text(result)
                     .font(.system(size: 20, weight: .medium, design: .serif))
                     .foregroundColor(Color("Concord"))
                     .opacity(isResultShowing ? 1.0 : 0.0)
+                
                 Divider()
+                
                 HStack {
+                    
                     Spacer()
+                    
                     Button(action: {
                         isResultShowing = false
                     }, label: {
@@ -152,8 +164,8 @@ struct ContentView: View {
                         .padding(.top)
                         .padding(.trailing)
                 }
-                Spacer(minLength: 430)
                 
+                Spacer(minLength: 380)
             }
         }
     }
