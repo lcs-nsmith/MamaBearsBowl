@@ -18,7 +18,7 @@ struct ContentView: View {
     @State var bowlTwoWeight: Double = 53.00
     @State var bowlThreeWeight: Double = 61.00
     
-    @State var isResultShowing = false
+    @State var isResultShowing = true
     
     // MARK: COMPUTED PROPERTIES
     var b1: Int {
@@ -131,15 +131,15 @@ struct ContentView: View {
                 
                 Divider()
                 
-                Button(action: {
-                    isResultShowing = true
-                }, label: {
-                    Text("Find Mama Bear's bowl!")
-                })
-                    .background(ButtonBackground())
-                    .buttonStyle(.bordered)
-                    .foregroundColor(Color("Concord"))
-                    .cornerRadius(11)
+//                Button(action: {
+//                    isResultShowing = true
+//                }, label: {
+//                    Text("Find Mama Bear's bowl!")
+//                })
+//                    .background(ButtonBackground())
+//                    .buttonStyle(.bordered)
+//                    .foregroundColor(Color("Concord"))
+//                    .cornerRadius(11)
                 Divider()
                 Text(result)
                     .font(.system(size: 20, weight: .medium, design: .serif))
@@ -152,17 +152,17 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    Button(action: {
-                        isResultShowing = false
-                    }, label: {
-                        Text("Reset")
-                    })
-                        .background(ButtonBackground())
-                        .buttonStyle(.bordered)
-                        .foregroundColor(Color("Concord"))
-                        .cornerRadius(11)
-                        .padding(.top)
-                        .padding(.trailing)
+//                    Button(action: {
+//                        isResultShowing = false
+//                    }, label: {
+//                        Text("Reset")
+//                    })
+//                        .background(ButtonBackground())
+//                        .buttonStyle(.bordered)
+//                        .foregroundColor(Color("Concord"))
+//                        .cornerRadius(11)
+//                        .padding(.top)
+//                        .padding(.trailing)
                 }
                 
                 Spacer(minLength: 380)
